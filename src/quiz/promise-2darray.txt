@@ -1,1 +1,9 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+1. "Sum called..." - The code calls the sum2DArray function and as a result the console.log prints 
+2. "returning from sum" - is printed after the setTimeout is called, the rest of the function continues to run 
+3. "sumPromis1"... - the function called returns a Promise but is still pending and running asynchronously
+4. Steps 1 and 2 are then repeated when sum2DArray([]) is called
+5. This time the function enters the .catch block and returns an error
+6. Now the async function continues to log each time addition happens 
+7. Then the .then block is called and results in printing the sum 

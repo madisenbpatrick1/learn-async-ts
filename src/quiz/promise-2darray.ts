@@ -28,5 +28,14 @@ const array2D = [
 const sumPromise1 = sum2DArray(array2D);
 console.log('sumPromise1:', sumPromise1);
 
+
+sumPromise1
+.then(res => console.log('sumPromise1:', res))
+.catch(err => console.error('sumPromise2:', err));
+
 const sumPromise2 = sum2DArray([]);
-console.log('sumPromise2:', sumPromise2);
+sumPromise2
+.then(res => console.log('sumPromise2:', res))
+.catch(err => console.error('sumPromise2:', err));
+//console.log('sumPromise2:', sumPromise2);
+
